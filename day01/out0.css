@@ -1,0 +1,23 @@
+body{
+    background: rgb(253, 244, 159);
+    color: green;
+    
+}
+button{
+    background: mediumslateblue;
+    color: orange;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+} 
+input{
+    background: lightgray;
+}
+h3{
+    color: blue;
+}
+table{
+    border: 1px solid#444444;
+    background: rgb(255, 252, 252);
+    border-collapse: collapse;
+}

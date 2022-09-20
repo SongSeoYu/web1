@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedbackform</title>
+    <!-- css-외부파일연결 -->
+    <link rel="stylesheet" href="form4.css">
+    <!-- css-태그사용 -->
+    <style>
+        /* 기본선택자 3가지 */
+        textarea{background: rgb(172, 232, 255);}
+        .row1{background: pink;}
+        #input{width: 230px;}
+    </style>
+</head>
+<body>
+    <center>
+        <table border="1px">
+            <tr class="row1" align="center">
+                <td>항목</td>
+                <td>입력</td>
+            </tr>
+            <tr align="center">
+                <td>번호</td>
+                <td><input type="number" id="input" placeholder="-없이 숫자로만 입력하여 주세요."></td>
+            </tr>
+            <tr align="center">
+                <td>제목</td>
+                <td><input type="text" id="input"></td>
+            </tr>
+            <tr align="center">
+                <td>내용</td>
+                <td><textarea name="feedback" id="" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr align="center">
+                <td>작성자</td>
+                <td><input type="text" id="input"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <!-- css-html태그 내 사용 -->
+                    <button style="font-weight: bold">글쓰기 완료</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
