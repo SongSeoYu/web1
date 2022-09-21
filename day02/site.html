@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+        font-size: 15px;
+        font-weight: bold;
+        color: blue;
+        }
+        #total{
+            width: 800px;
+            height: 800px;
+            background: yellowgreen;
+        }
+        #top1{
+            width: 800px;
+            height: 100px;
+            background: olivedrab;
+        }
+        #top2{
+            background: black;
+            color: yellow;
+            border-radius: 100px 10px;
+            width: 100px;
+            height: 50px;
+            position: fixed;
+            top: 10px;
+            right: 5px;
+
+        }
+        #center{
+            width: 800px;
+            height: 50px;
+            padding: 30px;
+        }
+        li{
+            list-style: none;
+            float: left;
+            padding: 15px;
+            width: 70px;
+            height: 20px;
+            /* background: yellow; */
+            text-align: center;
+        }
+        /* ul 안의 li가 자식역할child/ child중에서 몇번째인지 지정할 수 있다. */
+        /* nth-child(2n)은  짝수번 째 자식들을 지정한 것이다. */
+        li:nth-child(2n){background: orange;}
+        li:nth-child(2n+1){background: yellow;}
+        /* border-radius를 사용할때 두개의 크기만 적으면 적용순서는 1&3 2&4 또는 */
+        li:nth-child(n){border-radius: 50px;}
+    </style>
+</head>
+<body>
+    <div id="total">
+        <div id="top1">
+            <ul>
+                <li>
+                    <a href="member.html">회원가입</a>
+                </li>
+                <li><a href="product.html"></a>제품정보</li>
+                <li><a href="bbs.html"></a>게시판</li>
+                <li><a href="basket.html"></a>장바구니</li>
+            </ul>
+        </div>
+        <div id="top2">장바구니</div>
+        <div id="center">내용</div>
+    </div>
+</body>
+</html>

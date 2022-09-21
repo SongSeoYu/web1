@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원정보</title>
+    <style>
+        div{
+        font-size: 15px;
+        font-weight: bold;
+        color: blue;
+        }
+        #total{
+            width: 800px;
+            height: 800px;
+            background: yellowgreen;
+        }
+        #top1{
+            width: 800px;
+            height: 100px;
+            background: olivedrab;
+        }
+        #top2{
+            background: black;
+            color: yellow;
+            border-radius: 100px 10px;
+            width: 100px;
+            height: 50px;
+            position: fixed;
+            top: 10px;
+            right: 5px;
+
+        }
+        #center{
+            width: 800px;
+            height: 50px;
+            padding: 30px;
+        }
+        li{
+            list-style: none;
+            float: left;
+            padding: 15px;
+            width: 70px;
+            height: 20px;
+            /* background: yellow; */
+            text-align: center;
+        }
+        /* ul 안의 li가 자식역할child/ child중에서 몇번째인지 지정할 수 있다. */
+        /* nth-child(2n)은  짝수번 째 자식들을 지정한 것이다. */
+        li:nth-child(2n){background: orange;}
+        li:nth-child(2n+1){background: yellow;}
+        /* border-radius를 사용할때 두개의 크기만 적으면 적용순서는 1&3 2&4 또는 */
+        li:nth-child(n){border-radius: 50px;}
+        table{
+            border: 1px solid#444444;
+            background: rgb(255, 252, 252);
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="total">
+        <div id="top1">
+            <ul>
+                <li>
+                    <a href="member.html">회원가입</a>
+                </li>
+                <li><a href="product.html"></a>제품정보</li>
+                <li><a href="bbs.html"></a>게시판</li>
+                <li><a href="basket.html"></a>장바구니</li>
+            </ul><hr>
+        </div>
+        <div id="top2">장바구니</div>
+        <div id="center">
+            <form action="join">
+                <h3>회원가입</h3>
+                <table>
+                    <tr>
+                        <td> 가입할 ID</td>
+                        <td><input type="text" name="id"><br></td>
+                    </tr>
+                    <tr>
+                        <td>가입할 PW</td>
+                        <td><input type="password" name="pw"></td>
+                    </tr>
+                    <tr>
+                        <td>닉네임</td>
+                        <td><input type="text" name="name" ></td>
+                    </tr>
+                    <tr>
+                        <td>성별</td>
+                        <td> 남<input type="radio" name="gender" value="man" checked>
+                            여 <input type="radio" name="gender" value="woman"></td>
+                    </tr>
+                    <tr>
+                        <td>취미</td>
+                        <td>
+                            <input type="checkbox" name="hobby" value="run"> 달리기
+                            <input type="checkbox" name="hobby" value="youbute"> 동영상보기
+                            <input type="checkbox" name="hobby" value="internet"> 인터넷서핑
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>통신사</td>
+                        <td>
+                            <select name="tel">
+                                <option value="SKT">SKT</option>
+                                <option value="LG">LG</option>
+                                <option value="ect">알뜰폰</option>
+                            </select>
+                            <input type="number" name="number" id="" placeholder="-없이 번호를 입력하여 주세요.">
+                        </td>
+                    </tr>
+                    <tr><td>하고싶은 말</td>
+                    <td><textarea name="word" id="" cols="30" rows="10" placeholder="100글자 이내로 입력하여 주세요."></textarea></td>
+                    </tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" style="background: wheat;" value="서버로 전송">
+                    </td>
+                </table>
+            </form>
+        </div>
+    </div>
+    </center>
+    
+</body>
+</html>
