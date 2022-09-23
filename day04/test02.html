@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('#pay-btn').click(function(){
+                payment = $('#payment').val()
+                paymethod=$('#paymethod').val()
+                $("#result1").empty()
+                if(paymethod==1){
+                    result=payment-(payment*(20/100))
+                    $('#result1').append('총 결제금액은 ' + result + '원 입니다.')
+                }else if(paymethod==2){
+                    result=payment-(payment*(10/100))
+                    $('#result1').append('총 결제금액은 ' + result + '원 입니다.')
+                }else{
+                    $('#result1').append('총 결제금액은 ' + payment + '원 입니다.')
+                }
+            })
+
+            $('#id_btn').click(function() {
+                id=$('#id').val()
+                $("#result2").empty()
+                if(id=='apple' || id=='root'){
+                    $('#result2').append('중복되는 아이디입니다.')
+                }else{$('#result2').append('사용가능한 아이디입니다.')}
+            })
+
+            $('#phone_btn').click(function(){
+                phone = $('#phone').val()
+                p_num = phone.substring(0,3)
+                $("#result3").empty()
+                $("#result3").append('인증번호: ')
+                if(p_num=='011'){
+                    $('#result3').append('01234')
+                }else if(p_num==010){
+                    $('#result3').append('02234')
+                }else{$('#result3').append('03234')}
+            })
+        })
+    </script>
+    <style>
+        body{
+            background: rgb(255, 207, 215);
+        }
+        button{
+            background: orange;
+            color: white;
+            border-radius: 5px;
+            height: 28px;
+        }
+        input{
+            height: 23px;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    결제금액: <input type="text" id="payment"><br>
+    1)계좌이체, 2)신용카드 3)휴대폰결제<br>
+    결제수단: <input type="text" id="paymethod" placeholder="원하시는 결제 방법의 숫자를 입력해주세요." style="width: 250px;">
+    <button id="pay-btn">결제하기</button><br>
+    <hr>
+    회원가입할 id입력: <input type="text" id="id">
+    <button id="id_btn">회원가입시 id중복 체크</button>
+    <hr>
+    인증받을 전화번호 입력: <input type="text" id="phone">
+    <button id="phone_btn">인증번호 받기</button>
+    <hr>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+</body>
+</html>

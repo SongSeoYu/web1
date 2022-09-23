@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQ_ex3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function() { 
+            $('#b1').click(function() {
+               idValue = $('#id').val()
+
+               if (idValue.length < 5) {
+                    $('#result').append('<span style="color:red">5글자 미만</span><br>')       //따옴표 안에 따옴표를 쓸땐 다른종류의 따옴표를 써야한다.
+               } else {
+                    $('#result').append('<span style="color:red">유효함</span><br>') 
+               }
+            })
+
+
+            $('#b2').click(function() {
+               pwValue1=$('#pw1').val()
+               pwValue2=$('#pw2').val()
+
+               if (pwValue1==pwValue2) {
+                $('#result').append('<span>일치합니다.</span><br>')       //따옴표 안에 따옴표를 쓸땐 다른종류의 따옴표를 써야한다.
+               } else {
+                $('#result').append('<span>일치하지 않습니다.</span><br>') 
+               }
+            })
+        })
+    </script>
+</head>
+<body>
+   아이디 <input id="id" value="test"> <br>
+   <button id="b1">아이디 글자수 체크</button>
+   <hr>
+   패스워드1 <input id="pw1" value="1234"> <br>
+   패스워드2 <input id="pw2" value="1234"> <br>
+   <button id="b2">입력 패스워드 일치 확인</button>
+   <hr>
+   <div id="result"></div>
+</body>
+</html>
